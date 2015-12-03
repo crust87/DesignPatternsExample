@@ -1,4 +1,4 @@
-package com.crust87.pizza;
+package com.crust87.pizza.dough;
 
 public abstract class Dough {
 

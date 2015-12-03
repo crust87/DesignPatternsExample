@@ -24,13 +24,22 @@ public class PizzaMain {
 		PepperoniPizzaBuilder plainPizzaBuilder = new PepperoniPizzaBuilder();
 		CheezePizzaBuilder cheezePizzaBuilder = new CheezePizzaBuilder();
 		
-		System.out.println("Cook pepperoni pizza!");
-		Pizza plainPizza = createPizza(plainPizzaBuilder);
-		plainPizza.cook();
+//		System.out.println("Cook pepperoni pizza!");
+//		Pizza plainPizza = createPizza(plainPizzaBuilder);
+//		plainPizza.cook();
+//		
+//		System.out.println("\nCook cheeze pizza!");
+//		Pizza cheezePizza = createPizza(cheezePizzaBuilder);
+//		cheezePizza.cook();
 		
-		System.out.println("\nCook cheeze pizza!");
-		Pizza cheezePizza = createPizza(cheezePizzaBuilder);
-		cheezePizza.cook();
+		BigPizza.Builder bigPizzaBuilder = new BigPizza.Builder().setCheeze1(99f).setDough1(-20).setHam3(777);
+		BigPizza bigPizza0 = bigPizzaBuilder.build();
+		BigPizza bigPizza1 = bigPizzaBuilder.build();
+		
+		System.out.println("big pizza0");
+		System.out.println(bigPizza0);
+		System.out.println("\nbig pizza1");
+		System.out.println(bigPizza1);
 	}
 	
 	public static Pizza createPizza(PizzaBuilder pizzaBuilder) {

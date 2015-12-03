@@ -2,10 +2,9 @@ package com.crust87.pizza;
 
 import java.util.ArrayList;
 
-import com.crust87.pizza.builder.CheezePizzaBuilder;
-import com.crust87.pizza.builder.PizzaBuilder;
-import com.crust87.pizza.builder.PepperoniPizzaBuilder;
-import com.crust87.pizza.factory.PizzaFactory;
+import com.crust87.pizza.cheeze.Cheeze;
+import com.crust87.pizza.dough.Dough;
+import com.crust87.pizza.ham.Ham;
 
 public class Pizza {
 	private Dough mDough;

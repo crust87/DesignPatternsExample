@@ -1,9 +1,9 @@
 package com.crust87.pizza.builder;
 
-import com.crust87.pizza.Pepperoni;
 import com.crust87.pizza.Pizza;
-import com.crust87.pizza.PlainCheeze;
-import com.crust87.pizza.ThinDough;
+import com.crust87.pizza.cheeze.PlainCheeze;
+import com.crust87.pizza.dough.ThinDough;
+import com.crust87.pizza.ham.Pepperoni;
 
 public class PepperoniPizzaBuilder extends PizzaBuilder {
 

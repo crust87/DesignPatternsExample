@@ -1,4 +1,4 @@
-package com.crust87.pizza;
+package com.crust87.pizza.cheeze;
 
 public class PlainCheeze extends Cheeze {
 

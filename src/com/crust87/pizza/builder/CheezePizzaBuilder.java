@@ -1,10 +1,9 @@
 package com.crust87.pizza.builder;
 
-import com.crust87.pizza.NullHam;
 import com.crust87.pizza.Pizza;
-import com.crust87.pizza.PlainCheeze;
-import com.crust87.pizza.PlainDough;
-import com.crust87.pizza.PlainHam;
+import com.crust87.pizza.cheeze.PlainCheeze;
+import com.crust87.pizza.dough.PlainDough;
+import com.crust87.pizza.ham.NullHam;
 
 public class CheezePizzaBuilder extends PizzaBuilder {
 

@@ -1,12 +1,12 @@
 package com.crust87.pizza.factory;
 
-import com.crust87.pizza.Cheeze;
-import com.crust87.pizza.Dough;
-import com.crust87.pizza.Ham;
-import com.crust87.pizza.NullHam;
 import com.crust87.pizza.Pizza;
-import com.crust87.pizza.PlainCheeze;
-import com.crust87.pizza.PlainDough;
+import com.crust87.pizza.cheeze.Cheeze;
+import com.crust87.pizza.cheeze.PlainCheeze;
+import com.crust87.pizza.dough.Dough;
+import com.crust87.pizza.dough.PlainDough;
+import com.crust87.pizza.ham.Ham;
+import com.crust87.pizza.ham.NullHam;
 
 public class CheezePizzaFactory extends PizzaFactory {
 
