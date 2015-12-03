@@ -1,8 +1,8 @@
 package com.crust87.pizza;
 
 import com.crust87.pizza.builder.CheezePizzaBuilder;
+import com.crust87.pizza.builder.PepperoniPizzaBuilder;
 import com.crust87.pizza.builder.PizzaBuilder;
-import com.crust87.pizza.builder.PlainPizzaBuilder;
 import com.crust87.pizza.factory.CheezePizzaFactory;
 import com.crust87.pizza.factory.PizzaFactory;
 import com.crust87.pizza.factory.PlainPizzaFactory;
@@ -21,10 +21,10 @@ public class PizzaMain {
 //		Pizza cheezePizza = createPizza(cheezePizzaFactory);
 //		cheezePizza.cook();
 
-		PlainPizzaBuilder plainPizzaBuilder = new PlainPizzaBuilder();
+		PepperoniPizzaBuilder plainPizzaBuilder = new PepperoniPizzaBuilder();
 		CheezePizzaBuilder cheezePizzaBuilder = new CheezePizzaBuilder();
 		
-		System.out.println("Cook plain pizza!");
+		System.out.println("Cook pepperoni pizza!");
 		Pizza plainPizza = createPizza(plainPizzaBuilder);
 		plainPizza.cook();
 		

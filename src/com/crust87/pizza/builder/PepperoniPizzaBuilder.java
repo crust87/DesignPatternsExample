@@ -1,11 +1,11 @@
 package com.crust87.pizza.builder;
 
+import com.crust87.pizza.Pepperoni;
 import com.crust87.pizza.Pizza;
 import com.crust87.pizza.PlainCheeze;
-import com.crust87.pizza.PlainDough;
-import com.crust87.pizza.PlainHam;
+import com.crust87.pizza.ThinDough;
 
-public class PlainPizzaBuilder extends PizzaBuilder {
+public class PepperoniPizzaBuilder extends PizzaBuilder {
 
 	@Override
 	public PizzaBuilder buildPizza() {
@@ -16,14 +16,14 @@ public class PlainPizzaBuilder extends PizzaBuilder {
 
 	@Override
 	public PizzaBuilder buildDough() {
-		mPizza.setDough(new PlainDough());
+		mPizza.setDough(new ThinDough());
 		
 		return this;
 	}
 
 	@Override
 	public PizzaBuilder buildHam() {
-		mPizza.setHam(new PlainHam());
+		mPizza.setHam(new Pepperoni());
 		
 		return this;
 	}

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import com.crust87.pizza.builder.CheezePizzaBuilder;
 import com.crust87.pizza.builder.PizzaBuilder;
-import com.crust87.pizza.builder.PlainPizzaBuilder;
+import com.crust87.pizza.builder.PepperoniPizzaBuilder;
 import com.crust87.pizza.factory.PizzaFactory;
 
 public class Pizza {
