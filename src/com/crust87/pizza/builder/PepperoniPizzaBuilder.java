@@ -5,6 +5,13 @@ import com.crust87.pizza.cheeze.PlainCheeze;
 import com.crust87.pizza.dough.ThinDough;
 import com.crust87.pizza.ham.Pepperoni;
 
+/**
+ * Builder Pattern 예제
+ * 연산을 구현한다.
+ * 
+ * @author mabi
+ *
+ */
 public class PepperoniPizzaBuilder extends PizzaBuilder {
 
 	@Override

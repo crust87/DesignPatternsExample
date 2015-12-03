@@ -4,9 +4,17 @@ import com.crust87.pizza.factory.CheezePizzaFactory;
 import com.crust87.pizza.factory.PizzaFactory;
 import com.crust87.pizza.factory.PlainPizzaFactory;
 
+/**
+ * Abstract Factory Pattern 예제
+ * 
+ * @author mabi
+ *
+ */
 public class FactoryMain {
+	
 	public static void main(String[] args) {
 
+		// Abstract Factory 생성
 		PlainPizzaFactory plainPizzaFactory = new PlainPizzaFactory();
 		CheezePizzaFactory cheezePizzaFactory = new CheezePizzaFactory();
 		
@@ -19,7 +27,7 @@ public class FactoryMain {
 		cheezePizza.cook();
 	}
 	
-	
+	// Abstract Factory를 통해 피자를 생성하는 메소드
 	public static Pizza createPizza(PizzaFactory pizzaFactory) {
 		Pizza lPizza = pizzaFactory.makePizza();
 		lPizza.setDough(pizzaFactory.makeDough());

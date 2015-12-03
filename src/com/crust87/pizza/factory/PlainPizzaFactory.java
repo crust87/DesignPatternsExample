@@ -1,6 +1,5 @@
 package com.crust87.pizza.factory;
 
-import com.crust87.pizza.Pizza;
 import com.crust87.pizza.cheeze.Cheeze;
 import com.crust87.pizza.cheeze.PlainCheeze;
 import com.crust87.pizza.dough.Dough;
@@ -8,12 +7,14 @@ import com.crust87.pizza.dough.PlainDough;
 import com.crust87.pizza.ham.Ham;
 import com.crust87.pizza.ham.PlainHam;
 
+/**
+ * Abstract Factory Pattern 예제
+ * 연산을 구현한다.
+ * 
+ * @author mabi
+ *
+ */
 public class PlainPizzaFactory extends PizzaFactory {
-
-	@Override
-	public Pizza makePizza() {
-		return new Pizza();
-	}
 
 	@Override
 	public Dough makeDough() {
