@@ -3,26 +3,33 @@ package com.crust87.pizza;
 import com.crust87.pizza.builder.CheezePizzaBuilder;
 import com.crust87.pizza.builder.PizzaBuilder;
 import com.crust87.pizza.builder.PlainPizzaBuilder;
+import com.crust87.pizza.factory.CheezePizzaFactory;
 import com.crust87.pizza.factory.PizzaFactory;
+import com.crust87.pizza.factory.PlainPizzaFactory;
 
 public class PizzaMain {
 	public static void main(String[] args) {
-		/*
+
+		PlainPizzaFactory plainPizzaFactory = new PlainPizzaFactory();
+		CheezePizzaFactory cheezePizzaFactory = new CheezePizzaFactory();
+		
+//		System.out.println("Cook plain pizza!");
+//		Pizza plainPizza = createPizza(plainPizzaFactory);
+//		plainPizza.cook();
+//		
+//		System.out.println("\nCook cheeze pizza!");
+//		Pizza cheezePizza = createPizza(cheezePizzaFactory);
+//		cheezePizza.cook();
+
+		PlainPizzaBuilder plainPizzaBuilder = new PlainPizzaBuilder();
+		CheezePizzaBuilder cheezePizzaBuilder = new CheezePizzaBuilder();
+		
 		System.out.println("Cook plain pizza!");
-		Pizza plainPizza = createPizza(new PlainPizzaFactory());
+		Pizza plainPizza = createPizza(plainPizzaBuilder);
 		plainPizza.cook();
 		
 		System.out.println("\nCook cheeze pizza!");
-		Pizza cheezePizza = createPizza(new CheezePizzaFactory());
-		cheezePizza.cook();
-		*/
-		
-		System.out.println("Cook plain pizza!");
-		Pizza plainPizza = createPizza(new PlainPizzaBuilder());
-		plainPizza.cook();
-		
-		System.out.println("\nCook cheeze pizza!");
-		Pizza cheezePizza = createPizza(new CheezePizzaBuilder());
+		Pizza cheezePizza = createPizza(cheezePizzaBuilder);
 		cheezePizza.cook();
 	}
 	
