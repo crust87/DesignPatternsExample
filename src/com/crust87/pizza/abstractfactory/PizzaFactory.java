@@ -1,4 +1,4 @@
-package com.crust87.pizza.factory;
+package com.crust87.pizza.abstractfactory;
 
 import com.crust87.pizza.Pizza;
 import com.crust87.pizza.cheeze.Cheeze;

@@ -1,11 +1,11 @@
-package com.crust87.pizza.factory;
+package com.crust87.pizza.abstractfactory;
 
 import com.crust87.pizza.cheeze.Cheeze;
 import com.crust87.pizza.cheeze.PlainCheeze;
 import com.crust87.pizza.dough.Dough;
 import com.crust87.pizza.dough.PlainDough;
 import com.crust87.pizza.ham.Ham;
-import com.crust87.pizza.ham.PlainHam;
+import com.crust87.pizza.ham.NullHam;
 
 /**
  * Abstract Factory Pattern 예제
@@ -14,7 +14,7 @@ import com.crust87.pizza.ham.PlainHam;
  * @author mabi
  *
  */
-public class PlainPizzaFactory extends PizzaFactory {
+public class CheezePizzaFactory extends PizzaFactory {
 
 	@Override
 	public Dough makeDough() {
@@ -28,6 +28,7 @@ public class PlainPizzaFactory extends PizzaFactory {
 
 	@Override
 	public Ham makeHam() {
-		return new PlainHam();
+		// Null Object Pattern 사용
+		return new NullHam();
 	}
 }
