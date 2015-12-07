@@ -8,13 +8,13 @@ import com.crust87.pizza.dough.ThinDough;
 import com.crust87.pizza.ham.Pepperoni;
 import com.crust87.pizza.ham.PlainHam;
 
-public class ProtoTypeMain {
+public class PrototypeMain {
 
 	public static void main(String[] args) {
 		
 		// ProtoType Factory 생성
-		ProtoTypePizzaFactory plainPizzaFactory = new ProtoTypePizzaFactory(new PlainDough(), new PlainCheeze(), new PlainHam());
-		ProtoTypePizzaFactory cheezePizzaFactory = new ProtoTypePizzaFactory(new ThinDough(), new PlainCheeze(), new Pepperoni());
+		PrototypePizzaFactory plainPizzaFactory = new PrototypePizzaFactory(new PlainDough(), new PlainCheeze(), new PlainHam());
+		PrototypePizzaFactory cheezePizzaFactory = new PrototypePizzaFactory(new ThinDough(), new PlainCheeze(), new Pepperoni());
 				
 		System.out.println("Cook plain pizza!");
 		Pizza plainPizza = createPizza(plainPizzaFactory);
