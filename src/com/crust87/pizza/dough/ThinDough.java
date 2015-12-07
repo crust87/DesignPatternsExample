@@ -6,4 +6,11 @@ public class ThinDough extends Dough {
 	public void cook() {
 		System.out.println("cook ThinDough");
 	}
+	
+	@Override
+	public Dough copy() {
+		Dough lDough = new ThinDough();
+		// TODO set some attributes
+		return lDough;
+	}
 }

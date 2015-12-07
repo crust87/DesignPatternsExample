@@ -6,5 +6,12 @@ public class PlainHam extends Ham {
 	public void cook() {
 		System.out.println("cook PlainHam");
 	}
+	
+	@Override
+	public Ham copy() {
+		Ham lHam = new PlainHam();
+		// TODO set some attributes
+		return lHam;
+	}
 
 }

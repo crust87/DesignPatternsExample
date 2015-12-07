@@ -14,4 +14,9 @@ public class NullHam extends Ham {
 	public void cook() {
 		// DO NOTHING
 	}
+
+	@Override
+	public Ham copy() {
+		return new NullHam();
+	}
 }

@@ -7,4 +7,10 @@ public class PlainCheeze extends Cheeze {
 		System.out.println("cook PlainCheeze");
 	}
 
+	@Override
+	public Cheeze copy() {
+		Cheeze lCheeze = new PlainCheeze();
+		// TODO set some attributes
+		return lCheeze;
+	}
 }

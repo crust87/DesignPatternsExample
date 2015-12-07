@@ -7,4 +7,10 @@ public class PlainDough extends Dough {
 		System.out.println("cook PlainDough");
 	}
 
+	@Override
+	public Dough copy() {
+		Dough lDough = new PlainDough();
+		// TODO set some attributes
+		return lDough;
+	}
 }
