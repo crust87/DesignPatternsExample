@@ -1,7 +1,6 @@
-package com.crust87.pizza;
+package com.crust87.pizza.factorymethod;
 
-import com.crust87.pizza.factorymethod.CheezePizzaBox;
-import com.crust87.pizza.factorymethod.PlainPizzaBox;
+import com.crust87.pizza.Pizza;
 
 public class FactoryMethodMain {
 

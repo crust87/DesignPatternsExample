@@ -1,8 +1,6 @@
-package com.crust87.pizza;
+package com.crust87.pizza.builder;
 
-import com.crust87.pizza.builder.CheezePizzaBuilder;
-import com.crust87.pizza.builder.PepperoniPizzaBuilder;
-import com.crust87.pizza.builder.PizzaBuilder;
+import com.crust87.pizza.Pizza;
 
 /**
  * Builder Pattern 예제

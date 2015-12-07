@@ -1,8 +1,6 @@
-package com.crust87.pizza;
+package com.crust87.pizza.abstractfactory;
 
-import com.crust87.pizza.abstractfactory.CheezePizzaFactory;
-import com.crust87.pizza.abstractfactory.PizzaFactory;
-import com.crust87.pizza.abstractfactory.PlainPizzaFactory;
+import com.crust87.pizza.Pizza;
 
 /**
  * Abstract Factory Pattern 예제

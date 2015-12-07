@@ -1,12 +1,12 @@
-package com.crust87.pizza;
+package com.crust87.pizza.prototype;
 
+import com.crust87.pizza.Pizza;
 import com.crust87.pizza.abstractfactory.PizzaFactory;
 import com.crust87.pizza.cheeze.PlainCheeze;
 import com.crust87.pizza.dough.PlainDough;
 import com.crust87.pizza.dough.ThinDough;
 import com.crust87.pizza.ham.Pepperoni;
 import com.crust87.pizza.ham.PlainHam;
-import com.crust87.pizza.prototype.ProtoTypePizzaFactory;
 
 public class ProtoTypeMain {
 
