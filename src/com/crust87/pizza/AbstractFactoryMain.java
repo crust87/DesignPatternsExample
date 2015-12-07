@@ -10,7 +10,7 @@ import com.crust87.pizza.abstractfactory.PlainPizzaFactory;
  * @author mabi
  *
  */
-public class FactoryMain {
+public class AbstractFactoryMain {
 	
 	public static void main(String[] args) {
 
