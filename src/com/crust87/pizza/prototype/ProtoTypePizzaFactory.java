@@ -32,5 +32,4 @@ public class PrototypePizzaFactory extends PizzaFactory {
 	public Ham makeHam() {
 		return prototypeHam.copy();
 	}
-
 }
