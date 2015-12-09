@@ -8,11 +8,11 @@ import com.crust87.pizza.dough.PlainDough;
 import com.crust87.pizza.ham.Ham;
 import com.crust87.pizza.ham.NullHam;
 
-public class CheezePizzaBox extends PizzaBox {
+public class CheezePizza extends FactoryPizza {
 
 	@Override
 	protected Pizza makePizza() {
-		return new Pizza();
+		return new CheezePizza();
 	}
 
 	@Override

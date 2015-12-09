@@ -5,7 +5,7 @@ import com.crust87.pizza.cheeze.Cheeze;
 import com.crust87.pizza.dough.Dough;
 import com.crust87.pizza.ham.Ham;
 
-public abstract class PizzaBox {
+public abstract class FactoryPizza extends Pizza {
 	
 	public Pizza createPizza() {
 		Pizza lPizza = makePizza();

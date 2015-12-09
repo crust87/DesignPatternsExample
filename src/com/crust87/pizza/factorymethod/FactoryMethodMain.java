@@ -5,8 +5,8 @@ import com.crust87.pizza.Pizza;
 public class FactoryMethodMain {
 
 	public static void main(String[] args) {
-		PlainPizzaBox plainPizzaBox = new PlainPizzaBox();
-		CheezePizzaBox cheezePizzaBox = new CheezePizzaBox();
+		PlainPizza plainPizzaBox = new PlainPizza();
+		CheezePizza cheezePizzaBox = new CheezePizza();
 		
 		System.out.println("Cook plain pizza!");
 		Pizza plainPizza = plainPizzaBox.createPizza();
