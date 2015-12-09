@@ -7,16 +7,12 @@ import com.crust87.pizza.ham.Ham;
 
 public abstract class FactoryPizza extends Pizza {
 	
-	public Pizza createPizza() {
-		Pizza lPizza = makePizza();
-		
-		lPizza.setDough(makeDough());
-		lPizza.setHam(makeHam());
-		lPizza.addCheeze(makeCheeze());
-		lPizza.addCheeze(makeCheeze());
-		lPizza.addCheeze(makeCheeze());
-		
-		return lPizza;
+	public FactoryPizza() {
+		setDough(makeDough());
+		setHam(makeHam());
+		addCheeze(makeCheeze());
+		addCheeze(makeCheeze());
+		addCheeze(makeCheeze());
 	}
 	
 	protected abstract Pizza makePizza();
