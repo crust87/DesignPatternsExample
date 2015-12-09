@@ -2,19 +2,23 @@ package com.crust87.pizza.singleton;
 
 import com.crust87.pizza.Pizza;
 import com.crust87.pizza.abstractfactory.PizzaFactory;
+import com.crust87.pizza.cheeze.PlainCheeze;
+import com.crust87.pizza.dough.PlainDough;
+import com.crust87.pizza.ham.NullHam;
 
 public class SingletonMain {
 
 	public static void main(String[] args) {
 		EnumPepperoniPizzaBox enumPepperoniPizzaBox = EnumPepperoniPizzaBox.getInstance();
-		SingletonCheezePizzaFactory singletonCheezePizzaFactory = SingletonCheezePizzaFactory.getInstance();
+		SingletonPrototypePizzaFactory singletonPrototypePizzaFactory = SingletonPrototypePizzaFactory.getInstance();
+		singletonPrototypePizzaFactory.setPrototype(new PlainDough(), new PlainCheeze(), new NullHam());
 		
 		System.out.println("Cook plain pizza!");
 		Pizza plainPizza = enumPepperoniPizzaBox.createPizza();
 		plainPizza.cook();
 		
 		System.out.println("\nCook cheeze pizza!");
-		Pizza cheezePizza = createPizza(singletonCheezePizzaFactory);
+		Pizza cheezePizza = createPizza(singletonPrototypePizzaFactory);
 		cheezePizza.cook();
 	}
 	
