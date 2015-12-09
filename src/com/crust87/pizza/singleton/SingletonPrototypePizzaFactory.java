@@ -7,6 +7,8 @@ import com.crust87.pizza.ham.Ham;
 
 public class SingletonPrototypePizzaFactory extends PizzaFactory {
 	
+	private SingletonPrototypePizzaFactory() {}
+	
 	private Dough prototypeDough;
 	private Cheeze prototypeCheeze;
 	private Ham prototypeHam;

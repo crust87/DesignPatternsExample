@@ -16,14 +16,6 @@ import com.crust87.pizza.ham.Pepperoni;
 public enum EnumPepperoniPizza {
 	INSTANCE;
 
-	private EnumPepperoniPizza() {
-		
-	}
-	
-	public static EnumPepperoniPizza getInstance() {
-		return EnumPepperoniPizza.INSTANCE;
-	}
-	
 	public Pizza createPizza() {
 		Pizza lPizza = makePizza();
 		
