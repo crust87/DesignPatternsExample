@@ -9,7 +9,7 @@ import com.crust87.pizza.ham.NullHam;
 public class SingletonMain {
 
 	public static void main(String[] args) {
-		EnumPepperoniPizzaBox enumPepperoniPizzaBox = EnumPepperoniPizzaBox.getInstance();
+		EnumPepperoniPizza enumPepperoniPizzaBox = EnumPepperoniPizza.getInstance();
 		SingletonPrototypePizzaFactory singletonPrototypePizzaFactory = SingletonPrototypePizzaFactory.getInstance();
 		singletonPrototypePizzaFactory.setPrototype(new PlainDough(), new PlainCheeze(), new NullHam());
 		

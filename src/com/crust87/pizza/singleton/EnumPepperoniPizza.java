@@ -9,20 +9,19 @@ import com.crust87.pizza.ham.Ham;
 import com.crust87.pizza.ham.Pepperoni;
 
 /**
- * Actually this class is not Factory Method Pattern<br />
- * only example of Singleton Pattern user enumeration
+ * It's only example of Singleton Pattern user enumeration
  * @author mabi
  *
  */
-public enum EnumPepperoniPizzaBox {
+public enum EnumPepperoniPizza {
 	INSTANCE;
 
-	private EnumPepperoniPizzaBox() {
+	private EnumPepperoniPizza() {
 		
 	}
 	
-	public static EnumPepperoniPizzaBox getInstance() {
-		return EnumPepperoniPizzaBox.INSTANCE;
+	public static EnumPepperoniPizza getInstance() {
+		return EnumPepperoniPizza.INSTANCE;
 	}
 	
 	public Pizza createPizza() {
