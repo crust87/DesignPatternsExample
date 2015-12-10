@@ -8,11 +8,13 @@ import com.crust87.maze.patterns.abstractfactory.MazeFactory;
 
 public class MazePrototypeFactory extends MazeFactory {
 	
+	// Components
 	private Maze mPrototypeMaze;
 	private Wall mPrototypeWall;
 	private Room mPrototypeRoom;
 	private Door mPrototypeDoor;
 
+	// Constructors
 	public MazePrototypeFactory(Maze maze, Wall wall, Room room, Door door) {
 		mPrototypeMaze = maze;
 		mPrototypeWall = wall;

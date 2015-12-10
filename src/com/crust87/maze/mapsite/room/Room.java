@@ -3,31 +3,33 @@ package com.crust87.maze.mapsite.room;
 import com.crust87.maze.mapsite.MapSite;
 
 public class Room extends MapSite {
+	// Constants
 	public static enum Direction {north, east, south, west};
 	
 	// Components
 	private MapSite[] mMapSites;
 	
 	// Attributes
-	private int mRoomNo;
+	private int mRoomNumber;
 	
-	// Constructor
+	// Constructors
 	public Room() {
 		
 	}
 	
 	public Room(Room other) {
-		mRoomNo = other.mRoomNo;
+		mRoomNumber = other.mRoomNumber;
 		mMapSites = new MapSite[Direction.values().length];
 	}
 	
-	public Room(int roomNo) {
-		mRoomNo = roomNo;
+	public Room(int roomNumber) {
+		mRoomNumber = roomNumber;
 		mMapSites = new MapSite[Direction.values().length];
 	}
 	
-	public void init(int roomNo) {
-		mRoomNo = roomNo;
+	// Initialization
+	public void init(int roomNumber) {
+		mRoomNumber = roomNumber;
 	}
 	
 	public MapSite getSide(Direction direction) {
@@ -38,10 +40,6 @@ public class Room extends MapSite {
 		mMapSites[direction.ordinal()] = mapSite;
 	}
 	
-	public int getRoomNo() {
-		return mRoomNo;
-	}
-	
 	@Override
 	public void enter() {
 
@@ -50,6 +48,11 @@ public class Room extends MapSite {
 	@Override
 	public Room clone() {
 		return new Room(this);
+	}
+	
+	// Getters and Setters
+	public int getRoomNo() {
+		return mRoomNumber;
 	}
 
 }

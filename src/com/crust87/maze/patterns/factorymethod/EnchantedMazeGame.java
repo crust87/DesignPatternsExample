@@ -1,5 +1,6 @@
 package com.crust87.maze.patterns.factorymethod;
 
+import com.crust87.maze.Maze;
 import com.crust87.maze.Spell;
 import com.crust87.maze.mapsite.door.Door;
 import com.crust87.maze.mapsite.door.DoorNeedingSpell;
@@ -8,6 +9,17 @@ import com.crust87.maze.mapsite.room.Room;
 
 public class EnchantedMazeGame extends MazeGame {
 
+	public static void main(String[] args) {
+		EnchantedMazeGame game = new EnchantedMazeGame();
+		Maze maze = null;
+			
+		// Factory Method Pattern
+		maze = game.createMaze();
+		
+		System.out.println(maze.toString());
+	}
+	
+	// Constructors
 	public EnchantedMazeGame() {
 	}
 
@@ -17,7 +29,6 @@ public class EnchantedMazeGame extends MazeGame {
 			
 			@Override
 			public void castSpell() {
-				// TODO Auto-generated method stub
 				
 			}
 		});

@@ -7,8 +7,8 @@ import com.crust87.maze.mapsite.wall.Wall;
 
 public class MazeFactory {
 	
+	// Constructors
 	public MazeFactory() {
-		
 	}
 	
 	public Maze makeMaze() {
@@ -19,11 +19,11 @@ public class MazeFactory {
 		return new Wall();
 	}
 	
-	public Room makeRoom(int roomNo) {
-		return new Room(roomNo);
+	public Room makeRoom(int roomNumber) {
+		return new Room(roomNumber);
 	}
 	
-	public Door makeDoor(Room r1, Room r2) {
-		return new Door(r1, r2);
+	public Door makeDoor(Room room1, Room room2) {
+		return new Door(room1, room2);
 	}
 }

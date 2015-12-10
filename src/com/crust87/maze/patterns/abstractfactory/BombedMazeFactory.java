@@ -9,8 +9,8 @@ import com.crust87.maze.mapsite.wall.Wall;
 
 public class BombedMazeFactory extends MazeFactory {
 	
+	// Constructors
 	public BombedMazeFactory() {
-		
 	}
 	
 	public Maze makeMaze() {
@@ -21,11 +21,11 @@ public class BombedMazeFactory extends MazeFactory {
 		return new BombedWall(true);
 	}
 	
-	public Room makeRoom(int roomNo) {
-		return new RoomWithABomb(roomNo);
+	public Room makeRoom(int roomNumber) {
+		return new RoomWithABomb(roomNumber);
 	}
 	
-	public Door makeDoor(Room r1, Room r2) {
-		return new Door(r1, r2);
+	public Door makeDoor(Room fromRoom, Room toRoom) {
+		return new Door(fromRoom, toRoom);
 	}
 }

@@ -5,12 +5,15 @@ import com.crust87.maze.mapsite.room.Room;
 
 public class Door extends MapSite {
 
+	// Components
 	private Room mRoom1;
 	private Room mRoom2;
+	
+	// Attributes
 	private boolean isOpen;
 	
+	// Constructors
 	public Door() {
-		
 	}
 	
 	public Door(Door other) {
@@ -25,6 +28,7 @@ public class Door extends MapSite {
 		mRoom2 = room2;
 	}
 	
+	// Initialization
 	public void init(Room room1, Room room2) {
 		mRoom1 = room1;
 		mRoom2 = room2;

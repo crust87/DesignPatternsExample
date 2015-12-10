@@ -4,8 +4,8 @@ import com.crust87.maze.Maze;
 
 public abstract class MazeBuilder {
 	
+	// Constructors
 	protected MazeBuilder() {
-		
 	}
 
 	public abstract void buildMazz();

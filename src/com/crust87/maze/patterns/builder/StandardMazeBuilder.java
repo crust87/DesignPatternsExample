@@ -8,8 +8,10 @@ import com.crust87.maze.mapsite.wall.Wall;
 
 public class StandardMazeBuilder extends MazeBuilder {
 	
+	// Components
 	private Maze mCurrentMaze;
 	
+	// Constructors
 	public StandardMazeBuilder() {
 		mCurrentMaze = null;
 	}

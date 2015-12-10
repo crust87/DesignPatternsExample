@@ -12,6 +12,8 @@ public class MazeGame {
 		StandardMazeBuilder standardmazeBuilder = new StandardMazeBuilder();
 		game.createMaze(standardmazeBuilder);
 		maze = standardmazeBuilder.getMaze();
+		
+		System.out.println(maze.toString());
 	}
 	
 	public void createMaze(MazeBuilder builder) {

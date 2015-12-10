@@ -13,9 +13,11 @@ public class MazeGame {
 		MazeGame game = new MazeGame();
 		Maze maze = null;
 		
-		// Abstract Factory Pattern
+		// Prototype Pattern
 		MazePrototypeFactory simpleMazeFactory = new MazePrototypeFactory(new Maze(), new Wall(), new Room(), new Door());
 		maze = game.createMaze(simpleMazeFactory);
+		
+		System.out.println(maze.toString());
 	}
 	
 	public Maze createMaze(MazeFactory factory) {

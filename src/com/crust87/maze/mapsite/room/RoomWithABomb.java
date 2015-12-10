@@ -2,12 +2,13 @@ package com.crust87.maze.mapsite.room;
 
 public class RoomWithABomb extends Room {
 	
+	// Constructors
+	public RoomWithABomb(int roomNumber) {
+		super(roomNumber);
+	}
+	
 	public RoomWithABomb(RoomWithABomb other) {
 		super(other);
-	}
-
-	public RoomWithABomb(int roomNo) {
-		super(roomNo);
 	}
 
 	@Override

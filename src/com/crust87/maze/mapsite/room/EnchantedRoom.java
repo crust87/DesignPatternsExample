@@ -4,22 +4,25 @@ import com.crust87.maze.Spell;
 
 public class EnchantedRoom extends Room {
 	
+	// Components
 	protected Spell mSpell;
 
+	// Constructors
 	public EnchantedRoom(EnchantedRoom other) {
 		super(other);
 		
 		mSpell = other.mSpell;
 	}
 	
-	public EnchantedRoom(int roomNo, Spell spell) {
-		super(roomNo);
+	public EnchantedRoom(int roomNumber, Spell spell) {
+		super(roomNumber);
 		
 		mSpell = spell;
 	}
 	
-	public void init(int roomNo, Spell spell) {
-		super.init(roomNo);
+	// Initialization
+	public void init(int roomNumber, Spell spell) {
+		super.init(roomNumber);
 		
 		mSpell = spell;
 	}

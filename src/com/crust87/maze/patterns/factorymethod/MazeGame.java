@@ -7,6 +7,16 @@ import com.crust87.maze.mapsite.room.Room.Direction;
 import com.crust87.maze.mapsite.wall.Wall;
 
 public class MazeGame {
+	
+	public static void main(String[] args) {
+		MazeGame game = new MazeGame();
+		Maze maze = null;
+			
+		// Factory Method Pattern
+		maze = game.createMaze();
+		
+		System.out.println(maze.toString());
+	}
 
 	public Maze createMaze() {
 		Maze aMaze = makeMaze();

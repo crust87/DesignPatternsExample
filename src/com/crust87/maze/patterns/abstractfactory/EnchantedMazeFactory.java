@@ -10,8 +10,8 @@ import com.crust87.maze.mapsite.wall.Wall;
 
 public class EnchantedMazeFactory extends MazeFactory {
 	
+	// Constructors
 	public EnchantedMazeFactory() {
-		
 	}
 	
 	public Maze makeMaze() {
@@ -32,7 +32,7 @@ public class EnchantedMazeFactory extends MazeFactory {
 		});
 	}
 	
-	public Door makeDoor(Room r1, Room r2) {
-		return new DoorNeedingSpell(r1, r2);
+	public Door makeDoor(Room room1, Room room2) {
+		return new DoorNeedingSpell(room1, room2);
 	}
 }

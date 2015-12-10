@@ -1,4 +1,4 @@
-package com.crust87.maze.patterns.abstractfactory;
+package com.crust87.maze.patterns.singleton;
 
 import com.crust87.maze.Maze;
 import com.crust87.maze.mapsite.door.Door;
@@ -12,8 +12,8 @@ public class MazeGame {
 		MazeGame game = new MazeGame();
 		Maze maze = null;
 		
-		// Abstract Factory Pattern
-		EnchantedMazeFactory enchantedMazeFactory = new EnchantedMazeFactory();
+		// Singleton Pattern
+		MazeFactory enchantedMazeFactory = MazeFactory.getInstance();
 		maze = game.createMaze(enchantedMazeFactory);
 		
 		System.out.println(maze.toString());
