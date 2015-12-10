@@ -10,16 +10,16 @@ http://afreeca.com/crust87
 ## Creational patterns
 
 ### Abstract Factory
-https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/pizza/abstractfactory <br />
+https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/abstractfactory <br />
 
 ### Builder
-https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/pizza/builder <br />
+https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/builder <br />
 
 ### Factory Method
-https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/pizza/factorymethod <br />
+https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/factorymethod <br />
 
 ### Prototype
-https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/pizza/prototype <br />
+https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/prototype <br />
 
 ### Singleton
-https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/pizza/singleton <br />
+https://github.com/mabi87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/singleton <br />
