@@ -18,11 +18,11 @@ public class MazeGame {
 	}
 	
 	public void createMaze(MazeBuilder builder) {
-		builder.buildMazz();
-		builder.putDirection(1, 2, Direction.east);
-		builder.putDirection(2, 1, Direction.west);
-		builder.buildRoom(1);
-		builder.buildRoom(2);
-		builder.buildDoor(1, 2);
+		builder.buildMazz()
+			.putDirection(1, 2, Direction.east)
+			.putDirection(2, 1, Direction.west)
+			.buildRoom(1)
+			.buildRoom(2)
+			.buildDoor(1, 2);
 	}
 }

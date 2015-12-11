@@ -1,16 +1,12 @@
 package com.crust87.maze.patterns.builder;
 
-import java.util.HashMap;
-import java.util.Map;
-
 import com.crust87.maze.Maze;
-import com.crust87.maze.Pair;
 import com.crust87.maze.mapsite.door.Door;
 import com.crust87.maze.mapsite.room.Room;
 import com.crust87.maze.mapsite.room.Room.Direction;
 import com.crust87.maze.mapsite.wall.Wall;
 
-public class StandardMazeBuilder extends MazeBuilder {
+public class StandardMazeBuilder extends CountingMazeBuilder {
 
 	// Components
 	private Maze mCurrentMaze;
@@ -29,6 +25,8 @@ public class StandardMazeBuilder extends MazeBuilder {
 
 	@Override
 	public MazeBuilder buildRoom(int roomNo) {
+		super.buildRoom(roomNo);
+		
 		if(mCurrentMaze.getRoom(roomNo) == null) {
 			Room room = new Room(roomNo);
 			mCurrentMaze.addRoom(room);
@@ -44,6 +42,8 @@ public class StandardMazeBuilder extends MazeBuilder {
 
 	@Override
 	public MazeBuilder buildDoor(int fromRoomNo, int toRoomNo) {
+		super.buildDoor(fromRoomNo, toRoomNo);
+		
 		Room r1 = mCurrentMaze.getRoom(fromRoomNo);
 		Room r2 = mCurrentMaze.getRoom(toRoomNo);
 		Door d = new Door(r1, r2);
