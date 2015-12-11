@@ -13,12 +13,16 @@ public abstract class CountingMazeBuilder extends MazeBuilder {
 	}
 
 	@Override
-	public void buildRoom(int roomNo) {
+	public MazeBuilder buildRoom(int roomNo) {
 		numberOfRooms++;
+		
+		return this;
 	}
 
 	@Override
-	public void buildDoor(int fromRoomNo, int toRoomNo) {
+	public MazeBuilder buildDoor(int fromRoomNo, int toRoomNo) {
 		numberOfDoors++;
+		
+		return this;
 	}
 }

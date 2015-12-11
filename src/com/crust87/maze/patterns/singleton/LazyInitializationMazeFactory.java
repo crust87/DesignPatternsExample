@@ -15,6 +15,7 @@ public class LazyInitializationMazeFactory {
 	}
 	
 	public static LazyInitializationMazeFactory getInstance() {
+		// with Double checked locking
 		if(INSTANCE == null) {
 			synchronized (LazyInitializationMazeFactory.class) {
 				if(INSTANCE == null) {
