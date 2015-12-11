@@ -5,20 +5,20 @@ import com.crust87.maze.mapsite.door.Door;
 import com.crust87.maze.mapsite.room.Room;
 import com.crust87.maze.mapsite.wall.Wall;
 
-public class MazeFactory {
+public class LazyInitializationMazeFactory {
 
 	// Components
-	private static MazeFactory INSTANCE;
+	private static LazyInitializationMazeFactory INSTANCE;
 	
 	// Constructors
-	protected MazeFactory() {
+	protected LazyInitializationMazeFactory() {
 	}
 	
-	public static MazeFactory getInstance() {
+	public static LazyInitializationMazeFactory getInstance() {
 		if(INSTANCE == null) {
-			synchronized (MazeFactory.class) {
+			synchronized (LazyInitializationMazeFactory.class) {
 				if(INSTANCE == null) {
-					INSTANCE = new MazeFactory();
+					INSTANCE = new LazyInitializationMazeFactory();
 				}
 			}
 		}

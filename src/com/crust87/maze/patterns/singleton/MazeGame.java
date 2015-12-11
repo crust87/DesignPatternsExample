@@ -13,13 +13,13 @@ public class MazeGame {
 		Maze maze = null;
 		
 		// Singleton Pattern
-		MazeFactory enchantedMazeFactory = MazeFactory.getInstance();
+		LazyInitializationMazeFactory enchantedMazeFactory = LazyInitializationMazeFactory.getInstance();
 		maze = game.createMaze(enchantedMazeFactory);
 		
 		System.out.println(maze.toString());
 	}
 	
-	public Maze createMaze(MazeFactory factory) {
+	public Maze createMaze(LazyInitializationMazeFactory factory) {
 		Maze maze = factory.makeMaze();
 		Room room1 = factory.makeRoom(1);
 		Room room2 = factory.makeRoom(2);

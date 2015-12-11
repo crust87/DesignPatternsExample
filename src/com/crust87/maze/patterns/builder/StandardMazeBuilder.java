@@ -18,7 +18,7 @@ public class StandardMazeBuilder extends MazeBuilder {
 	
 	private Direction commonWall(Room room1, Room room2) {
 		// TODO
-		return Direction.north;
+		return null;
 	}
 
 	@Override

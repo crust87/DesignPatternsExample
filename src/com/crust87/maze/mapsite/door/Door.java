@@ -40,7 +40,11 @@ public class Door extends MapSite {
 	}
 	
 	public Room otherSideFrom(Room room) {
-		return null;
+		if(room.equals(mRoom1)) {
+			return mRoom2;
+		} else {
+			return mRoom1;
+		}
 	}
 
 	@Override
