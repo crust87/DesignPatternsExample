@@ -1,4 +1,4 @@
-package com.crust87.paint.frames;
+package com.crust87.paint.example5;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -17,8 +17,9 @@ import com.crust87.paint.drawingtools.PaintEllipse;
 import com.crust87.paint.drawingtools.PaintLine;
 import com.crust87.paint.drawingtools.PaintRectangle;
 import com.crust87.paint.drawingtools.PaintShape;
+import com.crust87.paint.example5.factory.PrototypeFactory;
 
-public class PaintPanel extends JPanel {
+public class Panel extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -29,16 +30,17 @@ public class PaintPanel extends JPanel {
 	private ArrayList<PaintShape> mShapes;
 	private MouseEventHandler mouseEventHandler;
 	
-	// prototypes
+	// factory
+	private PrototypeFactory mPrototypeFactory;
 	private PaintRectangle mPrototypeRectangle;
-	private PaintEllipse mPaintEllipse;
-	private PaintLine mPaintLine;
+	private PaintEllipse mPrototypeEllipse;
+	private PaintLine mPrototypeLine;
 	
 	// working variables
-	private PaintShape mShapeTool;
+	private PaintShape mCurrentShape;
 	
 	// constructors
-	public PaintPanel() {
+	public Panel() {
 		// attribute
 		mDrawingState = DRAWING_STATE.idle;
 		
@@ -49,11 +51,12 @@ public class PaintPanel extends JPanel {
 		addMouseListener(mouseEventHandler);
 		addMouseMotionListener(mouseEventHandler);
 		
-		setBackground(Color.WHITE);
-		
+		mPrototypeFactory = (PrototypeFactory) PrototypeFactory.getInstance();
 		mPrototypeRectangle = new PaintRectangle();
-		mPaintEllipse = new PaintEllipse();
-		mPaintLine = new PaintLine();
+		mPrototypeEllipse = new PaintEllipse();
+		mPrototypeLine = new PaintLine();
+		
+		setBackground(Color.WHITE);
 	}
 	
 	public void init() {
@@ -73,22 +76,22 @@ public class PaintPanel extends JPanel {
 		
 		repaint();
 	}
-
-	public void setShape(String actionCommand) {
+	
+	public void setDrawingAction(String actionCommand) {
 		if(actionCommand.equals(Constants.TOOLBAR_BUTTONNAMES.rectangle.toString())) {
-			mShapeTool = mPrototypeRectangle;
+			mPrototypeFactory.setPrototype(mPrototypeRectangle);
 		} else if(actionCommand.equals(Constants.TOOLBAR_BUTTONNAMES.ellipse.toString())) {
-			mShapeTool = mPaintEllipse;
+			mPrototypeFactory.setPrototype(mPrototypeEllipse);
 		} else if(actionCommand.equals(Constants.TOOLBAR_BUTTONNAMES.line.toString())) {
-			mShapeTool = mPaintLine;
+			mPrototypeFactory.setPrototype(mPrototypeLine);
 		}
 	}
 
 	public void startDrawing(Point startP) {
+		mCurrentShape = mPrototypeFactory.makeShape();
 		Graphics2D g2D = (Graphics2D) getGraphics();
-		mShapeTool = mShapeTool.clone();
-		mShapeTool.startDrawing(startP);
-		mShapeTool.draw(g2D);
+		mCurrentShape.startDrawing(startP);
+		mCurrentShape.draw(g2D);
 	}
 
 	public void keepDrawing(Point currentPoint) {
@@ -96,17 +99,17 @@ public class PaintPanel extends JPanel {
 		g2D.setXORMode(getBackground());
 		float[] dashes = { 4 };
 		g2D.setStroke(new BasicStroke(1, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1, dashes, 1));
-		mShapeTool.draw(g2D);
-		mShapeTool.keepDrawing(currentPoint);
-		mShapeTool.draw(g2D);
+		mCurrentShape.draw(g2D);
+		mCurrentShape.keepDrawing(currentPoint);
+		mCurrentShape.draw(g2D);
 	}
 	
 	public void finishDrawing(Point p) {
-		if(!(mShapeTool.getBounds().width == 0 && mShapeTool.getBounds().height == 0)) {
-			mShapes.add(mShapeTool);
+		if(!(mCurrentShape.getBounds().width == 0 && mCurrentShape.getBounds().height == 0)) {
+			mShapes.add(mCurrentShape);
 				
 			Graphics2D g2D = (Graphics2D) getGraphics();
-			mShapeTool.draw(g2D);
+			mCurrentShape.draw(g2D);
 			repaint();
 		}
 	}

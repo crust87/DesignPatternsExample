@@ -1,6 +1,5 @@
 package com.crust87.paint.drawingtools;
 
-import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Rectangle;
@@ -19,11 +18,7 @@ public class PaintRectangle extends PaintShape {
 	
 	@Override
 	public void draw(Graphics2D g2D) {
-		Color tempColor;
-		
-		tempColor = g2D.getColor();
 		g2D.draw(mShape);
-		g2D.setColor(tempColor);
 	}
 	
 	@Override

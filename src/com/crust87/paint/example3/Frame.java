@@ -1,33 +1,34 @@
-package com.crust87.paint.frames;
+package com.crust87.paint.example3;
 import java.awt.BorderLayout;
 
 import javax.swing.JFrame;
 
-public class PaintFrame extends JFrame{
+public class Frame extends JFrame{
 	
 	private static final long serialVersionUID = 1L;
 	
 	// components
-	private PaintToolBar mToolBar;
-	private PaintPanel mPanel;
+	private ToolBar mToolBar;
+	private Panel mPanel;
 	
-	public PaintFrame() {
+	public Frame() {
 		// attributes
 		this.setSize(400, 400);
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setTitle("Example3");
 		
 		// components		
-		mToolBar = new PaintToolBar();
+		mToolBar = new ToolBar();
 		this.add(BorderLayout.NORTH, mToolBar);
 		mToolBar.setSize(400,16);
 		
-		mPanel = new PaintPanel();
+		mPanel = new Panel();
 		this.add(mPanel);
 	}
 
 	public void init() {
 		// associations
-		mToolBar.setMyPanel(mPanel);
+		mToolBar.setPanel(mPanel);
 		
 		// component initialize
 		mToolBar.init();
