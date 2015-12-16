@@ -15,17 +15,17 @@ public class PaintToolBar extends JToolBar {
 	private static final long serialVersionUID = 1L;
 	
 	// components
-	private ButtonGroup buttonGroup;	
-	private GetToolBarHandler getToolBarHandler;
+	private ButtonGroup mButtonGroup;	
+	private ToolBarActionListener mToolBarActionListener;
 	
 	// association
-	private PaintPanel myPanel;
+	private PaintPanel mPaintPanel;
 	
 	public PaintToolBar() {
 		
 		// components
-		getToolBarHandler = new GetToolBarHandler();
-		buttonGroup = new ButtonGroup();
+		mToolBarActionListener = new ToolBarActionListener();
+		mButtonGroup = new ButtonGroup();
 
 		for (int i = 0; i < Constants.TOOLBAR_BUTTONNAMES.values().length; i++) {
 			JRadioButton button = new JRadioButton();
@@ -33,35 +33,39 @@ public class PaintToolBar extends JToolBar {
 			button.setIcon(new ImageIcon(Constants.TOOLBAR_BUTTONICON_FOLDER
 					+ Constants.TOOLBAR_BUTTONNAMES.values()[i].toString()
 					+ Constants.TOOLBAR_BUTTONICON_TYPE));
-			button.setSelectedIcon(new ImageIcon(
-					Constants.TOOLBAR_BUTTONICON_FOLDER
+			button.setSelectedIcon(new ImageIcon(Constants.TOOLBAR_BUTTONICON_FOLDER
 					+ Constants.TOOLBAR_BUTTONNAMES.values()[i].toString()
 					+ Constants.TOOLBAR_BUTTONICON_SLT
 					+ Constants.TOOLBAR_BUTTONICON_TYPE));
-			button.addActionListener(getToolBarHandler);
+			button.addActionListener(mToolBarActionListener);
 			button.setActionCommand(Constants.TOOLBAR_BUTTONNAMES.values()[i].toString());
 			
-			buttonGroup.add(button);
+			mButtonGroup.add(button);
 			this.add(button);
 		}
 	}
 	
 	public void init() {
-		JRadioButton rButton = (JRadioButton) this.getComponent(Constants.TOOLBAR_BUTTONNAMES.rectangle.ordinal());
-		rButton.doClick();
+		JRadioButton button = (JRadioButton) this.getComponent(Constants.TOOLBAR_BUTTONNAMES.rectangle.ordinal());
+		button.doClick();
 	}
 	
 	// getters and setters
-	public PaintPanel getMyPanel() { return myPanel;}
-	public void setMyPanel(PaintPanel myPanel) { this.myPanel = myPanel; }
+	public PaintPanel getMyPanel() {
+		return mPaintPanel;
+	}
+	
+	public void setMyPanel(PaintPanel panel) {
+		this.mPaintPanel = panel;
+	}
 
 	
-	private class GetToolBarHandler implements ActionListener {
+	private class ToolBarActionListener implements ActionListener {
 
 		@Override
 		public void actionPerformed(ActionEvent e) {
 			JRadioButton button = (JRadioButton) e.getSource();
-			myPanel.setShape(button.getActionCommand());
+			mPaintPanel.setShape(button.getActionCommand());
 		}
 
 	}

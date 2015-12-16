@@ -17,7 +17,7 @@ public class Constants {
 	public final static String TOOLBAR_BUTTONICON_SLT = "SLT";
 	
 	public static enum DRAWING_STATE{
-		tpDrawing,
+		drawing,
 		idle,
 	};
 	

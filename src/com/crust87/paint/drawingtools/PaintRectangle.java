@@ -4,14 +4,12 @@ import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.geom.AffineTransform;
 
 public class PaintRectangle extends PaintShape {
 	
 	public PaintRectangle() {
 		super();
-		shape = new Rectangle();
+		mShape = new Rectangle();
 	}
 	
 	@Override
@@ -24,38 +22,28 @@ public class PaintRectangle extends PaintShape {
 		Color tempColor;
 		
 		tempColor = g2D.getColor();
-		g2D.draw(shape);
+		g2D.draw(mShape);
 		g2D.setColor(tempColor);
 	}
 	
 	@Override
 	public Rectangle getBounds() {
-		return shape.getBounds();
+		return mShape.getBounds();
 	}
 
 	@Override
-	public void startDrawing(Point p) {
-		Rectangle r = (Rectangle)shape;
-		r.setLocation(p.x, p.y);
+	public void startDrawing(Point point) {
+		Rectangle rectangle = (Rectangle)mShape;
+		rectangle.setLocation(point.x, point.y);
 	}
 
 	@Override
-	public void keepDrawing(Point p) {
-		Rectangle r = (Rectangle)shape;
-		r.setSize(p.x - r.x, p.y - r.y);
+	public void keepDrawing(Point point) {
+		Rectangle rectangle = (Rectangle)mShape;
+		rectangle.setSize(point.x - rectangle.x, point.y - rectangle.y);
 	}
 
 	@Override
 	public void finishDrawing(Point p) {
 	}
-
-	@Override
-	public PaintShape deepCopy() {
-		AffineTransform affineTransform = new AffineTransform();
-		Shape newShape = affineTransform.createTransformedShape(shape);
-		PaintRectangle tempShape = new PaintRectangle();
-		tempShape.setShape(newShape);
-		return tempShape;
-	}
-	
 }

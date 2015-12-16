@@ -23,10 +23,10 @@ public class PaintPanel extends JPanel {
 	private static final long serialVersionUID = 1L;
 	
 	// attributes
-	private DRAWING_STATE drawingState;
+	private DRAWING_STATE mDrawingState;
 	
 	// component
-	private ArrayList<PaintShape> shapes;
+	private ArrayList<PaintShape> mShapes;
 	private MouseEventHandler mouseEventHandler;
 	
 	// prototypes
@@ -35,15 +35,15 @@ public class PaintPanel extends JPanel {
 	private PaintLine mPaintLine;
 	
 	// working variables
-	private PaintShape shapeTool;
+	private PaintShape mShapeTool;
 	
 	// constructors
 	public PaintPanel() {
 		// attribute
-		drawingState = DRAWING_STATE.idle;
+		mDrawingState = DRAWING_STATE.idle;
 		
 		// components
-		shapes = new ArrayList<PaintShape>();
+		mShapes = new ArrayList<PaintShape>();
 		
 		mouseEventHandler = new MouseEventHandler();
 		addMouseListener(mouseEventHandler);
@@ -59,53 +59,54 @@ public class PaintPanel extends JPanel {
 	public void init() {
 	}
 	
-	public ArrayList<PaintShape> getShapes() { return shapes; }
+	// Getters and Setters
+	public ArrayList<PaintShape> getShapes() {
+		return mShapes;
+	}
+	
 	public void setShapes(ArrayList<PaintShape> shapes) {
 		if(shapes == null) {
-			this.shapes.clear();
+			mShapes.clear();
 		} else {
-			this.shapes = shapes;
+			mShapes = shapes;
 		}
 		
 		repaint();
 	}
 
-	public PaintShape getShape() { return shapeTool; }
-	public void setShape(PaintShape shape) { this.shapeTool = shape; }
-	
 	public void setShape(String actionCommand) {
 		if(actionCommand.equals(Constants.TOOLBAR_BUTTONNAMES.rectangle.toString())) {
-			setShape(mPrototypeRectangle);
+			mShapeTool = mPrototypeRectangle;
 		} else if(actionCommand.equals(Constants.TOOLBAR_BUTTONNAMES.ellipse.toString())) {
-			setShape(mPaintEllipse);
+			mShapeTool = mPaintEllipse;
 		} else if(actionCommand.equals(Constants.TOOLBAR_BUTTONNAMES.line.toString())) {
-			setShape(mPaintLine);
+			mShapeTool = mPaintLine;
 		}
 	}
 
 	public void startDrawing(Point startP) {
 		Graphics2D g2D = (Graphics2D) getGraphics();
-		shapeTool = shapeTool.clone();
-		shapeTool.startDrawing(startP);
-		shapeTool.draw(g2D);
+		mShapeTool = mShapeTool.clone();
+		mShapeTool.startDrawing(startP);
+		mShapeTool.draw(g2D);
 	}
 
-	public void keepDrawing(Point currentP) {
+	public void keepDrawing(Point currentPoint) {
 		Graphics2D g2D = (Graphics2D) getGraphics();
 		g2D.setXORMode(getBackground());
 		float[] dashes = { 4 };
 		g2D.setStroke(new BasicStroke(1, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1, dashes, 1));
-		shapeTool.draw(g2D);
-		shapeTool.keepDrawing(currentP);
-		shapeTool.draw(g2D);
+		mShapeTool.draw(g2D);
+		mShapeTool.keepDrawing(currentPoint);
+		mShapeTool.draw(g2D);
 	}
 	
 	public void finishDrawing(Point p) {
-		if(!(shapeTool.getBounds().width == 0 && shapeTool.getBounds().height == 0)) {
-			shapes.add(shapeTool);
+		if(!(mShapeTool.getBounds().width == 0 && mShapeTool.getBounds().height == 0)) {
+			mShapes.add(mShapeTool);
 				
 			Graphics2D g2D = (Graphics2D) getGraphics();
-			shapeTool.draw(g2D);
+			mShapeTool.draw(g2D);
 			repaint();
 		}
 	}
@@ -115,7 +116,7 @@ public class PaintPanel extends JPanel {
 	public void paint(Graphics g) {
 		super.paint(g);
 		Graphics2D g2D = (Graphics2D) g;
-		for(PaintShape s : shapes) {
+		for(PaintShape s : mShapes) {
 			s.draw(g2D);
 		}
 	}
@@ -133,16 +134,16 @@ public class PaintPanel extends JPanel {
 		@Override
 		public void mousePressed(MouseEvent e) {
 			Point point = e.getPoint();
-			if(drawingState == DRAWING_STATE.idle) {
+			if(mDrawingState == DRAWING_STATE.idle) {
 				startDrawing(point);
-				drawingState = DRAWING_STATE.tpDrawing;
+				mDrawingState = DRAWING_STATE.drawing;
 			}
 		}
 		
 		@Override
 		public void mouseDragged(MouseEvent e) {
 			Point point = e.getPoint();
-			if(drawingState == DRAWING_STATE.tpDrawing) {
+			if(mDrawingState == DRAWING_STATE.drawing) {
 				keepDrawing(point);	
 			}
 		}
@@ -150,9 +151,9 @@ public class PaintPanel extends JPanel {
 		@Override
 		public void mouseReleased(MouseEvent e) {
 			Point point = e.getPoint();
-			if(drawingState == DRAWING_STATE.tpDrawing) {
+			if(mDrawingState == DRAWING_STATE.drawing) {
 				finishDrawing(point);
-				drawingState = DRAWING_STATE.idle;
+				mDrawingState = DRAWING_STATE.idle;
 			}
 		}
 		

@@ -8,8 +8,8 @@ public class PaintFrame extends JFrame{
 	private static final long serialVersionUID = 1L;
 	
 	// components
-	private PaintToolBar toolBar;
-	private PaintPanel panel;
+	private PaintToolBar mToolBar;
+	private PaintPanel mPanel;
 	
 	public PaintFrame() {
 		// attributes
@@ -17,21 +17,21 @@ public class PaintFrame extends JFrame{
 		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		// components		
-		toolBar = new PaintToolBar();
-		this.add(BorderLayout.NORTH, toolBar);
-		toolBar.setSize(400,16);
+		mToolBar = new PaintToolBar();
+		this.add(BorderLayout.NORTH, mToolBar);
+		mToolBar.setSize(400,16);
 		
-		panel = new PaintPanel();
-		this.add(panel);
+		mPanel = new PaintPanel();
+		this.add(mPanel);
 	}
 
 	public void init() {
 		// associations
-		toolBar.setMyPanel(panel);
+		mToolBar.setMyPanel(mPanel);
 		
 		// component initialize
-		toolBar.init();
-		panel.init();
+		mToolBar.init();
+		mPanel.init();
 		
 	}
 }

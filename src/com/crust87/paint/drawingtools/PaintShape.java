@@ -7,18 +7,16 @@ import java.awt.Shape;
 
 public abstract class PaintShape {
 	
-	protected Shape shape;
+	protected Shape mShape;
 	
-	public Shape getShape() { return shape; }
-	public void setShape(Shape shape) { this.shape = shape; }
+	public Shape getShape() { return mShape; }
+	public void setShape(Shape shape) { this.mShape = shape; }
 	
 	public abstract PaintShape clone();
 	public abstract void draw(Graphics2D g2D);	
 	public abstract Rectangle getBounds();
 	
-	public abstract void startDrawing(Point p);
-	public abstract void keepDrawing(Point p);
-	public abstract void finishDrawing(Point p);
-	
-	public abstract PaintShape deepCopy();
+	public abstract void startDrawing(Point point);
+	public abstract void keepDrawing(Point point);
+	public abstract void finishDrawing(Point point);
 }
