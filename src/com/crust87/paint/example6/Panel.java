@@ -17,7 +17,6 @@ import com.crust87.paint.drawingtools.PaintEllipse;
 import com.crust87.paint.drawingtools.PaintLine;
 import com.crust87.paint.drawingtools.PaintRectangle;
 import com.crust87.paint.drawingtools.PaintShape;
-import com.crust87.paint.example5.factory.PrototypeFactory;
 
 public class Panel extends JPanel {
 	
@@ -85,9 +84,14 @@ public class Panel extends JPanel {
 			mCurrentPrototype = mPrototypeLine;
 		}
 	}
+	
+	// Factory Method
+	public PaintShape makeShape() {
+		return mCurrentPrototype.clone();
+	}
 
 	public void startDrawing(Point startP) {
-		mCurrentShape = mCurrentPrototype.clone();
+		mCurrentShape = makeShape();
 		Graphics2D g2D = (Graphics2D) getGraphics();
 		mCurrentShape.startDrawing(startP);
 		mCurrentShape.draw(g2D);
