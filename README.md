@@ -18,11 +18,11 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maz
 
 ### Factory Method
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/factorymethod <br />
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint/example6 <br />
 
 ### Prototype
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/prototype <br />
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint/example4 <br />
-https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint/example6 <br />
 
 ### Singleton
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/singleton <br />
