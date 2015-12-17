@@ -17,7 +17,6 @@ import com.crust87.paint.drawingtools.PaintEllipse;
 import com.crust87.paint.drawingtools.PaintLine;
 import com.crust87.paint.drawingtools.PaintRectangle;
 import com.crust87.paint.drawingtools.PaintShape;
-import com.crust87.paint.example3.factory.ShapeFactory;
 import com.crust87.paint.example4.factory.PrototypeFactory;
 
 public class Panel extends JPanel {
