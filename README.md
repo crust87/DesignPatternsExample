@@ -15,6 +15,7 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/pai
 
 ### Builder
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/builder <br />
+https://github.com/crust87/Android-ImageCropper/blob/master/imageCropper/src/main/java/com/crust87/imagecropper/cropbox/CropBox.java#L166
 
 ### Factory Method
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/factorymethod <br />
