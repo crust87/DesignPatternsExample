@@ -32,8 +32,9 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/pai
 ## Structural patterns
 
 ### Adapter
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint/drawingtools <br />
 
 ### Bridge
-https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/window <br/>
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/window <br />
 
 ### Composite
