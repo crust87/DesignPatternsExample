@@ -1,4 +1,4 @@
-package com.crust87.window;
+package com.crust87.window.xwindow;
 
 public class Display {
 

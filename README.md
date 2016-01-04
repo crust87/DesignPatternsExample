@@ -28,3 +28,12 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/pai
 ### Singleton
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/maze/patterns/singleton <br />
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint/example5 <br />
+
+## Structural patterns
+
+### Adapter
+
+### Bridge
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/window <br/>
+
+### Composite

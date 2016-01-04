@@ -1,5 +1,8 @@
 package com.crust87.window;
 
+import com.crust87.window.core.Point;
+import com.crust87.window.core.View;
+
 public class IconWindow extends Window {
 
 	private String mBitmapName;

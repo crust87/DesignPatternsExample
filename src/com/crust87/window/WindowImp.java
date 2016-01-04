@@ -1,5 +1,7 @@
 package com.crust87.window;
 
+import com.crust87.window.core.Point;
+
 public abstract class WindowImp {
 
 	protected WindowImp() {

@@ -1,5 +1,9 @@
 package com.crust87.window;
 
+import com.crust87.window.core.Point;
+import com.crust87.window.core.View;
+import com.crust87.window.core.WindowSystemFactory;
+
 public abstract class Window {
 
 	private WindowImp mImp;

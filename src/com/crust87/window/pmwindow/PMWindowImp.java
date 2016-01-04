@@ -1,12 +1,13 @@
-package com.crust87.window;
+package com.crust87.window.pmwindow;
 
-public class XWindowImp extends WindowImp {
+import com.crust87.window.WindowImp;
+import com.crust87.window.core.Point;
 
-	private Display mDisplay;
-	private Drawable mWindowId;
-	private GraphicContext mGraphicContext;
+public class PMWindowImp extends WindowImp {
 	
-	public XWindowImp() {
+	private HPS mHps;
+
+	public PMWindowImp() {
 		// TODO Auto-generated constructor stub
 	}
 
@@ -36,11 +37,20 @@ public class XWindowImp extends WindowImp {
 
 	@Override
 	public void deviceRect(float t, float l, float b, float r) {
-		int x = Math.round(t);
-		int y = Math.round(l);
-		int w = Math.round(r - l);
-		int h = Math.round(b - t);
-		XDrawRectangle(mDisplay, mWindowId, mGraphicContext, x, y, w, h);
+		Point[] points = new Point[4];
+		points[0].x = l;
+		points[0].y = t;
+		
+		points[1].x = r;
+		points[1].y = t;
+		
+		points[2].x = r;
+		points[2].y = b;
+		
+		points[3].x = l;
+		points[3].y = b;
+		
+		gpiStrokePath(mHps, points);
 	}
 
 	@Override
@@ -55,8 +65,7 @@ public class XWindowImp extends WindowImp {
 
 	}
 	
-	private void XDrawRectangle(Display mDisplay2, Drawable mWindowId2, GraphicContext mGraphicContext2, int x, int y, int w, int h) {
-		
+	private void gpiStrokePath(HPS mHps2, Point[] points) {
+		// TODO Auto-generated method stub
 	}
-
 }

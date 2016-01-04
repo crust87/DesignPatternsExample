@@ -1,4 +1,6 @@
-package com.crust87.window;
+package com.crust87.window.core;
+
+import com.crust87.window.Window;
 
 public class View {
 

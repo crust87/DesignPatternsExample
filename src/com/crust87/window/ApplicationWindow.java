@@ -1,5 +1,8 @@
 package com.crust87.window;
 
+import com.crust87.window.core.Point;
+import com.crust87.window.core.View;
+
 public class ApplicationWindow extends Window {
 
 	public ApplicationWindow(View contents) {
