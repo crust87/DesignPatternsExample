@@ -36,5 +36,6 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/pai
 
 ### Bridge
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/window <br />
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/tvremocon<br />
 
 ### Composite
