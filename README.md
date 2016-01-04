@@ -39,3 +39,4 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/win
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/tvremocon<br />
 
 ### Composite
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/computer<br />
