@@ -40,3 +40,6 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/tvr
 
 ### Composite
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/computer<br />
+
+### Decorator
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/visualcomponent<br />
