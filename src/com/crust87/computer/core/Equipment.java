@@ -1,4 +1,4 @@
-package com.crust87.computer;
+package com.crust87.computer.core;
 
 public abstract class Equipment {
 	
@@ -8,9 +8,8 @@ public abstract class Equipment {
 		mName = name;
 	}
 	
-	public abstract int power();
-	public abstract int netPrice();
-	public abstract int DiscountPrice();
+	public abstract int getPower();
+	public abstract int calcPower();
 	
 	public abstract void add(Equipment equipment);
 	public abstract void remove(Equipment equipment);

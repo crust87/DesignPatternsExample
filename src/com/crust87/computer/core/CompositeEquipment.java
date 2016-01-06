@@ -1,4 +1,4 @@
-package com.crust87.computer;
+package com.crust87.computer.core;
 
 import java.util.ArrayList;
 
@@ -11,27 +11,19 @@ public abstract class CompositeEquipment extends Equipment {
 		mEquipments = new ArrayList<>();
 	}
 
+	
+	
 	@Override
-	public int netPrice() {
+	public int calcPower() {
 		int total = 0;
-		
 		for(Equipment e: mEquipments) {
-			total += e.netPrice();
+			total += e.calcPower();
 		}
 		
 		return total;
 	}
 
-	@Override
-	public int DiscountPrice() {
-		int total = 0;
-		
-		for(Equipment e: mEquipments) {
-			total += e.DiscountPrice();
-		}
-		
-		return total;
-	}
+
 
 	@Override
 	public void add(Equipment equipment) {
