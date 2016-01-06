@@ -33,6 +33,7 @@ https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/pai
 
 ### Adapter
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint/drawingtools <br />
+https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/paint2<br />
 
 ### Bridge
 https://github.com/crust87/DesignPatternsExample/tree/master/src/com/crust87/window <br />
